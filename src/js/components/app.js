@@ -2,31 +2,37 @@
 var React = require('react');
 var AppActions = require('../actions/AppActions');
 var AppStore = require('../stores/AppStore');
-var AttachButton = require('./AttackPartial');
+var AttackButton = require('./AttackPartial');
+var DetackButton = require('./DetackPartial');
 
 var App = React.createClass({
 
   getInitialState: function() {
     return {
-      model: null
+      eventList: []
     };
   },
 
   render:function(){
-    var attachRender = '',
-      model = this.state.model;
+    var eventListRender = '',
+      eventList = this.state.eventList;
 
-    if (model !== null) {
-      attachRender = (
-        <p>Attack content: {model.action.item}</p>
-      );
+    if (eventList !== null) {
+      eventListRender =  eventList.map(function(item, i) {
+        return <p>Attack content: {item.action.item}</p>;
+      });
     }
 
     return (
       <div className="wrapper">
         <h3>Click this Title, then check console</h3>
-        {attachRender}
-        <AttachButton/>
+        {eventListRender}
+
+        <div className="wrapper">
+          <AttackButton/>
+          <span> </span>
+          <DetackButton/>
+        </div>
       </div>
     )
   },
@@ -41,7 +47,9 @@ var App = React.createClass({
 
   _onChange: function(data) {
     console.log('Change', data);
-    this.setState({model: data});
+    var eventList = this.state.eventList;
+    eventList.push(data);
+    this.setState({eventList: eventList});
   }
 });
 

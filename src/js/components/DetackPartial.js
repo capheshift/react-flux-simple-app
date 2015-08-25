@@ -5,12 +5,12 @@ var AppStore = require('../stores/AppStore');
 
 var App = React.createClass({
   handleClick:function(){
-    AppActions.addItem('Attacking header!');
+    AppActions.addItem('Detack header!');
   },
 
   render:function(){
     return (
-      <button onClick={this.handleClick}>ATTACH</button>
+      <button onClick={this.handleClick}>DETACK</button>
     )
   }
 });
