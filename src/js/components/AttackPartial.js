@@ -10,9 +10,7 @@ var App = React.createClass({
 
   render:function(){
     return (
-      <div className="wrapper">
-        <button onClick={this.handleClick}>ATTACH</button>
-      </div>
+      <button onClick={this.handleClick}>ATTACH</button>
     )
   }
 });

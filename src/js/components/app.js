@@ -27,8 +27,12 @@ var App = React.createClass({
       <div className="wrapper">
         <h3>Click this Title, then check console</h3>
         {eventListRender}
-        <AttackButton/>
-        <DetackButton/>
+
+        <div className="wrapper">
+          <AttackButton/>
+          <span> </span>
+          <DetackButton/>
+        </div>
       </div>
     )
   },
