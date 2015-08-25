@@ -19014,14 +19014,15 @@ var App = React.createClass({displayName: 'App',
 
     return (
       React.DOM.div({className: "wrapper"}, 
-        React.DOM.h3(null, "Click this Title, then check console"), 
+        React.DOM.h3(null, "With flux, components can effect each other!"), 
         eventListRender, 
 
         React.DOM.div({className: "wrapper"}, 
           AttackButton(null), 
           React.DOM.span(null, " "), 
           DetackButton(null)
-        )
+        ), 
+        React.DOM.small(null, "click on buttons and see how")
       )
     )
   },

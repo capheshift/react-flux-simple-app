@@ -25,7 +25,7 @@ var App = React.createClass({
 
     return (
       <div className="wrapper">
-        <h3>Click this Title, then check console</h3>
+        <h3>With flux, components can effect each other!</h3>
         {eventListRender}
 
         <div className="wrapper">
@@ -33,6 +33,7 @@ var App = React.createClass({
           <span> </span>
           <DetackButton/>
         </div>
+        <small>click on buttons and see how</small>
       </div>
     )
   },
