@@ -2,6 +2,8 @@
 
 This is the simples possible App that I can think of that implements the React framework on top of the Flux architecture.
 
+[DEMO](http://capheshift.github.io/react-flux-simple-app/)
+
 ## Installation
 
     git clone git@github.com:bengrunfeld/react-flux-simple-app.git
